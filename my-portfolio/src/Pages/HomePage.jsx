@@ -1,9 +1,23 @@
 import styled from "styled-components";
 
 function HomePage() {
-  return <HomePageStyle>Home Page</HomePageStyle>;
+  return (
+    <HomePageStyle className="row vh-100 border">
+      {/* Divide the pages into parts right and left */}
+      <div className="col-lg-8 left-container"></div>
+      <div className="col-lg-4 right-container"></div>
+    </HomePageStyle>
+  );
 }
 
-export default HomePage;
+const HomePageStyle = styled.div`
+  .right-container {
+    background-color: #7b2cbf;
+    position: relative;
+  }
+  .left-container {
+    background-color: #000000;
+  }
+`;
 
-const HomePageStyle = styled.div``;
+export default HomePage;

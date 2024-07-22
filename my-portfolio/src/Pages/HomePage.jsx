@@ -2,13 +2,18 @@ import styled from "styled-components";
 import { SiGmail } from "react-icons/si";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
-// import UserImage from "../Images/user3.png";
+import UserImage from "../Images/user2.png";
+import MyNavigation from "../Components/MyNavigation";
 
 function HomePage() {
   return (
     <HomePageStyle className="row vh-100 border">
       {/* Divide the pages into parts right and left */}
-      <div className="col-lg-8 left-container"></div>
+      <div className="col-lg-8 left-container">
+        <div className="d-flex-column h-100">
+          <MyNavigation />
+        </div>
+      </div>
       <div className="col-lg-4 right-container">
         <div className="contact-container d-flex gap-3 mt-5 ms-5">
           Contact Me
@@ -42,7 +47,7 @@ function HomePage() {
             </a>
           </div>
         </div>
-        {/* <img src={UserImage} className="user-img" alt="User Image" /> */}
+        <img src={UserImage} className="user-img" alt="User Image" />
       </div>
     </HomePageStyle>
   );
@@ -66,7 +71,7 @@ const HomePageStyle = styled.div`
 
     .user-img {
       position: absolute;
-      left: -60%;
+      left: -25%;
       bottom: 0;
       height: 80%;
     }
